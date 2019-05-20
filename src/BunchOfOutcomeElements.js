@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import './outcome/OutcomeElement.js';
 
-class TestElement extends LitElement {
+class BunchOfOutcomeElements extends LitElement {
 
   constructor() {
     super();
@@ -29,9 +29,9 @@ class TestElement extends LitElement {
 
   render() {
     return html`
-      ${this.buttons.map( i => html`<outcome-element primaryLabel="Liverpool" secondaryLabel="(+1)" odds="2.35" selected></outcome-element>`)}
+      ${this.buttons.map( i => html`<outcome-element primaryLabel="Liverpool" secondaryLabel="(+1)" odds="2.35"></outcome-element>`)}
     `;
   }
 }
 
-customElements.define('test-element', TestElement);
+customElements.define('bunch-of-outcome-elements', BunchOfOutcomeElements);

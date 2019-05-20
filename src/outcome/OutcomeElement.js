@@ -35,10 +35,6 @@ class OutcomeElement extends LitElement {
             background-color: #FEC8D8;
         }
 
-        button:focus {
-            background-color: #FFDFD3;
-        }
-
         :host([selected]) button {
             color: black;
             background-color: #feffa3;
@@ -127,7 +123,7 @@ class OutcomeElement extends LitElement {
   }
 
   handleClick(e) {
-      console.log('Clicked button - ', this.prop)
+      console.log('Clicked button - ', this)
   }
 
   render() {
