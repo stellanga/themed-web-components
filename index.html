@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Load polyfills -->
+  <script src="/node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
+
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || {
+      waitFor(cb) { addEventListener('WebComponentsReady', cb) }
+    }
+    WebComponents.waitFor(async () => {
+      import('./src/test-element.js');
+    });
+  </script>
+
+  <style>
+
+    body {
+      padding: 0;
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    test-element {
+      --global-Margin: 2rem;
+    }
+
+  </style>
+
+  <title>Themed web components</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <test-element>
+  </test-element>
+
+</body>

@@ -1,0 +1,11 @@
+{
+  "name": "themed-web-components",
+  "main": "test-element.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "latest"
+  }
+}
