@@ -14,6 +14,7 @@
     }
     WebComponents.waitFor(async () => {
       import('./src/BunchOfOutcomeElements.js');
+      import('./src/outcome/OutcomeElement.js');
     });
   </script>
 
@@ -25,11 +26,48 @@
       width: 100vw;
       height: 100vh;
       box-sizing: border-box;
+   
+      /* Theme definition */
+      --global-typography-fontFamily: "Roboto, sans-serif";
+      --global-typography-fontSize: 14px;
+      --global-typography-color: rgba(0, 0, 0, .87);
+
+      --global-palette-primary-darkest: rgba(1, 115, 131, 1);
+      --global-palette-primary-darker: rgba(1, 159, 180, 1);
+      --global-palette-primary-normal: rgba(2, 200, 226, 1);
+      --global-palette-primary-lighter: rgba(16, 228, 255, 1);
+
+      --global-palette-secondary-darker: rgba(210, 186, 0, 1);
+      --global-palette-secondary-normal: rgba(255, 227, 0, 1);
+      --global-palette-secondary-lighter: rgba(255, 233, 58, 1);
+      --global-palette-secondary-lightest: rgba(255, 244, 163, 1);
+
+      --global-palette-accent-darker: rgba(174, 52, 108, 1);
+      --global-palette-accent-normal: rgba(208, 70, 132, 1);
+      --global-palette-accent-lighter: rgba(217, 112, 159, 1);
+
+      --global-palette-white100: rgba(255, 255, 255, 1);
+      --global-palette-white70: rgba(255, 255, 255, .7);
+      --global-palette-white24: rgba(255, 255, 255, .24);
+      --global-palette-white12: rgba(255, 255, 255, .12);
+
+      --global-palette-black100: rgba(0, 0, 0, 1);
+      --global-palette-black87: rgba(0, 0, 0, .87);
+      --global-palette-black56: rgba(0, 0, 0, .56);
+      --global-palette-black24: rgba(0, 0, 0, .24);
+
+      /* Component specifics */
+      --outcome-button-backgroundColor: var(--global-palette-primary-normal);
+      --outcome-button-backgroundColor-hover: var(--global-palette-primary-lighter);
+      --outcome-button-selected-backgroundColor: var(--global-palette-secondary-normal);
+      --outcome-button-selected-backgroundColor-hover: var(--global-palette-secondary-lighter);
     }
 
-    test-element {
-      --global-Margin: 2rem;
+    outcome-element {
+      margin: 1rem;
+      --outcome-button-backgroundColor: red;
     }
+    
 
   </style>
 
@@ -41,7 +79,8 @@
 
 <body>
 
-  <bunch-of-outcome-elements>
+  <bunch-of-outcome-elements class="Kambi">
   </bunch-of-outcome-elements>
+  <outcome-element primaryLabel="Liverpool" secondaryLabel="(+1)" odds="2.35" layout="ROW"></outcome-element>
 
 </body>
